@@ -47,7 +47,7 @@ ActiveRecord::Schema.define(version: 2018_12_08_184153) do
   create_table "veterans", force: :cascade do |t|
     t.string "username"
     t.string "location"
-    t.string "password_digest"
+    t.string "password"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

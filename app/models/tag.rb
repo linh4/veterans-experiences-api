@@ -1,6 +1,6 @@
 class Tag < ApplicationRecord
   has_many :tag_posts
-  has_many :posts, through: :posts
+  has_many :posts, through: :tag_posts
 
   # def increment_count
   #   count += 1
