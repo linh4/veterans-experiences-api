@@ -3,11 +3,11 @@
 #
 # Examples:
 #
-v1 = Veteran.create({name: 'Veteran1', location: 'Location1'})
-v2 = Veteran.create({name: 'Veteran2', location: 'Location2'})
-v3 = Veteran.create({name: 'Veteran3', location: 'Location3'})
-v4 = Veteran.create({name: 'Veteran4', location: 'Location4'})
-v5 = Veteran.create({name: 'Veteran5', location: 'Location5'})
+v1 = Veteran.create({username: 'Veteran1', location: 'Location1'})
+v2 = Veteran.create({username: 'Veteran2', location: 'Location2'})
+v3 = Veteran.create({username: 'Veteran3', location: 'Location3'})
+v4 = Veteran.create({username: 'Veteran4', location: 'Location4'})
+v5 = Veteran.create({username: 'Veteran5', location: 'Location5'})
 
 lorem_ipsum = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam condimentum a nulla in accumsan. Maecenas placerat erat sit amet hendrerit tincidunt. Praesent eget eleifend augue. Duis interdum orci in est mattis euismod. Praesent ut ex vestibulum, tempor metus sit amet, iaculis est. Sed dapibus, tellus a elementum ultrices, enim tortor mollis diam, at consequat nisl urna eget arcu. Pellentesque accumsan metus id lobortis molestie. Donec massa nisl, fermentum quis quam eu, posuere accumsan turpis. Etiam quam lorem, mollis vitae urna vitae, fermentum consectetur orci. "
 
@@ -41,13 +41,13 @@ p27 = Post.create({title: 'Post27 Title', content: "#{lorem_ipsum}", veteran_id:
 
 comment_text = "Comment comment comment comment text comment comment comment text comment comment comment text comment comment comment text comment comment comment text comment comment comment text"
 
-c1 = Comment.crate({comment: "#{comment_text}", post_id: p1.id })
-c2 = Comment.crate({comment: "#{comment_text}", post_id: p2.id })
-c3 = Comment.crate({comment: "#{comment_text}", post_id: p3.id })
-c4 = Comment.crate({comment: "#{comment_text}", post_id: p4.id })
-c5 = Comment.crate({comment: "#{comment_text}", post_id: p10.id })
-c6 = Comment.crate({comment: "#{comment_text}", post_id: p11.id })
-c7 = Comment.crate({comment: "#{comment_text}", post_id: p12.id })
-c8 = Comment.crate({comment: "#{comment_text}", post_id: p13.id })
-c9 = Comment.crate({comment: "#{comment_text}", post_id: p21.id })
-c10 = Comment.crate({comment: "#{comment_text}", post_id: p23.id })
+c1 = Comment.create({comment: "#{comment_text}", post_id: p1.id })
+c2 = Comment.create({comment: "#{comment_text}", post_id: p2.id })
+c3 = Comment.create({comment: "#{comment_text}", post_id: p3.id })
+c4 = Comment.create({comment: "#{comment_text}", post_id: p4.id })
+c5 = Comment.create({comment: "#{comment_text}", post_id: p10.id })
+c6 = Comment.create({comment: "#{comment_text}", post_id: p11.id })
+c7 = Comment.create({comment: "#{comment_text}", post_id: p12.id })
+c8 = Comment.create({comment: "#{comment_text}", post_id: p13.id })
+c9 = Comment.create({comment: "#{comment_text}", post_id: p21.id })
+c10 = Comment.create({comment: "#{comment_text}", post_id: p23.id })
