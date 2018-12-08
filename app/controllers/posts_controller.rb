@@ -13,7 +13,7 @@ class PostsController < ApplicationController
    def create
     @post = Post.new(post_params)
 
-    params[:content].split.map{|tag| tag.gsub(/[^a-z ]/i, '')}.each do |tag|
+    params[:content].split.map{|tag| tag.gsub(/[^a-z ]/i, '').downcase}.each do |tag|
       tag = Tag.find_by(tag: tag)
       if tag
         tag.increment_count

@@ -11,12 +11,12 @@ v5 = Veteran.create({username: 'Veteran5', location: 'Location5'})
 
 lorem_ipsum = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam condimentum a nulla in accumsan. Maecenas placerat erat sit amet hendrerit tincidunt. Praesent eget eleifend augue. Duis interdum orci in est mattis euismod. Praesent ut ex vestibulum, tempor metus sit amet, iaculis est. Sed dapibus, tellus a elementum ultrices, enim tortor mollis diam, at consequat nisl urna eget arcu. Pellentesque accumsan metus id lobortis molestie. Donec massa nisl, fermentum quis quam eu, posuere accumsan turpis. Etiam quam lorem, mollis vitae urna vitae, fermentum consectetur orci. "
 
-p1 = Post.create({title: 'Post1 Title', content: "#{lorem_ipsum}", veteran_id: v1.id })
-p2 = Post.create({title: 'Post2 Title', content: "#{lorem_ipsum}", veteran_id: v1.id })
-p3 = Post.create({title: 'Post3 Title', content: "#{lorem_ipsum}", veteran_id: v1.id })
-p4 = Post.create({title: 'Post4 Title', content: "#{lorem_ipsum}", veteran_id: v2.id })
-p5 = Post.create({title: 'Post5 Title', content: "#{lorem_ipsum}", veteran_id: v2.id })
-p6 = Post.create({title: 'Post6 Title', content: "#{lorem_ipsum}", veteran_id: v2.id })
+p1 = Post.create({title: 'Post1 Title', content: "Happy today", veteran_id: v1.id })
+p2 = Post.create({title: 'Post2 Title', content: "Happy later", veteran_id: v1.id })
+p3 = Post.create({title: 'Post3 Title', content: "Happy now", veteran_id: v1.id })
+p4 = Post.create({title: 'Post4 Title', content: "Good weather", veteran_id: v2.id })
+p5 = Post.create({title: 'Post5 Title', content: "Fun day today outside", veteran_id: v2.id })
+p6 = Post.create({title: 'Post6 Title', content: "happy there", veteran_id: v2.id })
 p7 = Post.create({title: 'Post7 Title', content: "#{lorem_ipsum}", veteran_id: v2.id })
 p8 = Post.create({title: 'Post8 Title', content: "#{lorem_ipsum}", veteran_id: v2.id })
 p9 = Post.create({title: 'Post9 Title', content: "#{lorem_ipsum}", veteran_id: v2.id })
