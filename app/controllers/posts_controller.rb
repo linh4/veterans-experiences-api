@@ -11,7 +11,17 @@ class PostsController < ApplicationController
    end
 
    def create
-     @post = Post.new(post_params)
+    @post = Post.new(post_params)
+
+    params[:content].split.map{|tag| tag.gsub(/[^a-z ]/i, '')}.each do |tag|
+      tag = Tag.find_by(tag: tag)
+      if tag
+        tag.increment_count
+      else
+        Tag.create(tag: tag, count: 0)
+      end
+    end
+
     if @post.save
       render json: @post, status: :accepted
     else
