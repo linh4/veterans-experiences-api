@@ -1,15 +1,17 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
-#
-# Examples:
-#
+puts "Starting seeding"
+
 v1 = Veteran.create({username: 'Veteran1', location: 'Location1'})
 v2 = Veteran.create({username: 'Veteran2', location: 'Location2'})
 v3 = Veteran.create({username: 'Veteran3', location: 'Location3'})
 v4 = Veteran.create({username: 'Veteran4', location: 'Location4'})
 v5 = Veteran.create({username: 'Veteran5', location: 'Location5'})
 
-lorem_ipsum = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam condimentum a nulla in accumsan. Maecenas placerat erat sit amet hendrerit tincidunt. Praesent eget eleifend augue. Duis interdum orci in est mattis euismod. Praesent ut ex vestibulum, tempor metus sit amet, iaculis est. Sed dapibus, tellus a elementum ultrices, enim tortor mollis diam, at consequat nisl urna eget arcu. Pellentesque accumsan metus id lobortis molestie. Donec massa nisl, fermentum quis quam eu, posuere accumsan turpis. Etiam quam lorem, mollis vitae urna vitae, fermentum consectetur orci. "
+li1 = "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+li2 = "Aliquam condimentum a nulla in accumsan."
+li3 = "Maecenas placerat erat sit amet hendrerit tincidunt."
+li4 = "Praesent eget eleifend augue. Duis interdum orci in est mattis euismod. Praesent ut ex vestibulum, tempor metus sit amet, iaculis est."
+li5 = "Sed dapibus, tellus a elementum ultrices, enim tortor mollis diam, at consequat nisl urna eget arcu."
+li6 = "Pellentesque accumsan metus id lobortis molestie. Donec massa nisl, fermentum quis quam eu, posuere accumsan turpis. Etiam quam lorem, mollis vitae urna vitae, fermentum consectetur orci. "
 
 p1 = Post.create({title: 'Post1 Title', content: "The clock within this blog and the clock on my laptop are 1 hour different from each other.", veteran_id: v1.id })
 p2 = Post.create({title: 'Post2 Title', content: "If the Easter Bunny and the Tooth Fairy had babies would they take your teeth and leave chocolate for you?", veteran_id: v1.id })
@@ -41,13 +43,15 @@ p27 = Post.create({title: 'Post27 Title', content: "They got there early, and th
 
 comment_text = "Comment comment comment comment text comment comment comment text comment comment comment text comment comment comment text comment comment comment text comment comment comment text"
 
-c1 = Comment.create({comment: "#{comment_text}", post_id: p1.id })
-c2 = Comment.create({comment: "#{comment_text}", post_id: p2.id })
-c3 = Comment.create({comment: "#{comment_text}", post_id: p3.id })
-c4 = Comment.create({comment: "#{comment_text}", post_id: p4.id })
-c5 = Comment.create({comment: "#{comment_text}", post_id: p10.id })
-c6 = Comment.create({comment: "#{comment_text}", post_id: p11.id })
-c7 = Comment.create({comment: "#{comment_text}", post_id: p12.id })
-c8 = Comment.create({comment: "#{comment_text}", post_id: p13.id })
-c9 = Comment.create({comment: "#{comment_text}", post_id: p21.id })
-c10 = Comment.create({comment: "#{comment_text}", post_id: p23.id })
+c1 = Comment.create({comment: "#{li1}", post_id: p1.id })
+c2 = Comment.create({comment: "#{li2}", post_id: p2.id })
+c3 = Comment.create({comment: "#{li3}", post_id: p3.id })
+c4 = Comment.create({comment: "#{li4}", post_id: p4.id })
+c5 = Comment.create({comment: "#{li5}", post_id: p10.id })
+c6 = Comment.create({comment: "#{li6}", post_id: p11.id })
+c7 = Comment.create({comment: "#{li1}", post_id: p12.id })
+c8 = Comment.create({comment: "#{li2}", post_id: p13.id })
+c9 = Comment.create({comment: "#{li3}", post_id: p21.id })
+c10 = Comment.create({comment: "#{li4}", post_id: p23.id })
+
+puts "Done seeding"
