@@ -1,10 +1,15 @@
 puts "Starting seeding"
+Veteran.destroy_all
+Post.destroy_all
+Comment.destroy_all
+Tag.destroy_all
+TagPost.destroy_all
 
-v1 = Veteran.create({username: 'Veteran1', location: 'Location1'})
-v2 = Veteran.create({username: 'Veteran2', location: 'Location2'})
-v3 = Veteran.create({username: 'Veteran3', location: 'Location3'})
-v4 = Veteran.create({username: 'Veteran4', location: 'Location4'})
-v5 = Veteran.create({username: 'Veteran5', location: 'Location5'})
+v1 = Veteran.create({username: 'Veteran1', location: 'Location1', password: 'hi'})
+v2 = Veteran.create({username: 'Veteran2', location: 'Location2', password: 'bye'})
+v3 = Veteran.create({username: 'Veteran3', location: 'Location3', password: 'hi'})
+v4 = Veteran.create({username: 'Veteran4', location: 'Location4', password: 'hi'})
+v5 = Veteran.create({username: 'Veteran5', location: 'Location5', password: 'hi'})
 
 li1 = "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
 li2 = "Aliquam condimentum a nulla in accumsan."

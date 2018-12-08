@@ -1,5 +1,7 @@
 class VeteransController < ApplicationController
 
+  skip_before_action :authorized, only: [:create]
+
   def index
     @veterans = Veteran.all
     render json: @veterans
@@ -11,11 +13,13 @@ class VeteransController < ApplicationController
   end
 
   def create
+    byebug
     @veteran = Veteran.new(veteran_params)
    if @veteran.save
-     render json: @veteran, status: :created
+     @token = encode_token(veteran_id: @veteran.id)
+     render json: {veteran: VeteranSerializer.new(@veteran), jwt:@token}, status: :created
    else
-     render json: {error: 'Failed to create user'}, status: :not_acceptable
+     render json: {error: 'Failed to create veteran'}, status: :not_acceptable
    end
   end
 

@@ -23,6 +23,7 @@ class PostsController < ApplicationController
     end
 
     if @post.save
+      @token = encode_token(post_id: @post.id)
       render json: @post, status: :accepted
     else
       render json: {errors: @post.errors.full_messages}, status: :unprocessible_entity

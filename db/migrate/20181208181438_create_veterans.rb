@@ -3,7 +3,7 @@ class CreateVeterans < ActiveRecord::Migration[5.2]
     create_table :veterans do |t|
       t.string :username
       t.string :location
-      t.string :password
+      t.string :password_digest
       t.timestamps
     end
   end
